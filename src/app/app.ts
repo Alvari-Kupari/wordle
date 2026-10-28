@@ -1,12 +1,18 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Grid } from './grid/grid';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
+  imports: [Grid, FormsModule],
 })
 export class App {
-  protected readonly title = signal('wordle');
+  guess = ""
+
+  makeGuess() {
+    console.log("GUESS: " + this.guess)
+  }
+
 }

@@ -1,0 +1,9 @@
+:host {
+    margin: 1rem;
+    padding: 4rem;
+    border: 2px solid purple;
+}
+
+strong {
+    font-size: 2rem;
+}
