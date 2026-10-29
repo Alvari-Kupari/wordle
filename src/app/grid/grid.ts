@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, input } from "@angular/core";
 import { Row } from "../row/row";
 import { WordleAPIService } from "../api";
 
@@ -9,10 +9,7 @@ import { WordleAPIService } from "../api";
     imports: [Row],
 })
 export class Grid {
-    words = [
-        "beagl",
-        "horse",
-    ]
+    words = input.required<string[]>()
 
     private worda = inject(WordleAPIService);
     worda$ = this.worda.getWord()
