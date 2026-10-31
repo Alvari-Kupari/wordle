@@ -1,4 +1,5 @@
-
-@for (word of words(); track $index) {
-        <row [word]="word"></row>
+@if(word$ | async; as word) {
+        @for (guess of guesses(); track $index) {
+                <row [guess]="guess" [word]="word"></row>
+        }
 }

@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <grid [words]="guesses()"></grid>
+  <grid [guesses]="guesses()"></grid>
   <form [formGroup]="guessForm" (ngSubmit)="makeGuess()">
     <label for="guess">Make a guess</label>
     <input placeholder="Write guess..." [formControl]="guessForm.controls.guess">

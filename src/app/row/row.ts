@@ -8,5 +8,6 @@ import { Tile } from "../tile/tile";
     imports: [Tile]
 })
 export class Row {
+    guess = input.required<string>()
     word = input.required<string>()
 }

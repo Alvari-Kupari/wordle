@@ -1,16 +1,17 @@
 import { Component, inject, input } from "@angular/core";
 import { Row } from "../row/row";
 import { WordleAPIService } from "../api";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
     selector: 'grid',
     templateUrl: 'grid.html',
     styleUrl: 'grid.css',
-    imports: [Row],
+    imports: [Row, AsyncPipe],
 })
 export class Grid {
-    words = input.required<string[]>()
+    guesses = input.required<string[]>()
 
-    private worda = inject(WordleAPIService);
-    worda$ = this.worda.getWord()
+    private word = inject(WordleAPIService);
+    word$ = this.word.getWord()
 }

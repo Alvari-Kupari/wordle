@@ -1,0 +1,7 @@
+{
+    "/svc/wordle": {
+        "target": "https://www.nytimes.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
