@@ -1,5 +1,7 @@
 import { Component, input } from "@angular/core";
 
+export type TileType = "red" | "green" | "orange" | "gray"
+
 @Component({
     selector: 'tile',
     templateUrl: 'tile.html',
@@ -7,4 +9,5 @@ import { Component, input } from "@angular/core";
 })
 export class Tile {
     letter = input.required<string>()
+    type = input.required<TileType>()
 }
