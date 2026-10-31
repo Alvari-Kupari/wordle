@@ -1,0 +1,13 @@
+<form [formGroup]="guessForm" (ngSubmit)="sendGuess()">
+    <label for="guess">Make a guess</label>
+    <input placeholder="Write guess..." [formControl]="guessForm.controls.guess">
+
+    @if(guessForm.controls.guess.touched || guessForm.controls.guess.dirty) {
+        @if(guessForm.controls.guess.hasError("required")) {
+        <p class="error">Guess is required.</p>
+        } @else if (guessForm.controls.guess.hasError("pattern")) {
+        <p class="error">Guess must be 5 letters.</p>
+        }
+    }
+    <button type="submit" [disabled]="!guessForm.valid">Guess</button>
+</form>

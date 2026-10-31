@@ -3,20 +3,6 @@
     width: 50%;
 }
 
-form {
-    margin-top: 1rem;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-}
-
-.error {
-    margin-top: 0;
-    color: red;
-    font-size: 0.8rem;
-}
-
 .completed p {
     color: green;
 }
